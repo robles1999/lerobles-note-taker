@@ -12,8 +12,6 @@ router.get("/notes", (req, res) => {
 
 // Add new note to the db.json file with a unique id
 router.post("/notes", (req, res) => {
-  console.log(req.body);
-  console.log("Notes", notes);
 
   // Generate a unique id
   const id = crypto.randomBytes(16).toString("hex");
@@ -55,7 +53,7 @@ router.delete("/notes/:id", (req, res) => {
     JSON.stringify(notes),
     (err) => {
       if (err) throw err;
-      res.send("Item deleted.");
+      res.send("Note deleted.");
     }
   );
 });
