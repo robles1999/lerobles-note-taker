@@ -1,5 +1,8 @@
 ## Note-Taking Application
-This is a note-taking application that allows users to create, save, and view notes. The application provides a landing page with a link to the notes page.
+This is a note-taking application that allows users to create, save, and view notes.
+
+![landing page screenshot](./public/assets/images/note-taker-landing-page.jpg)
+![notes page screenshot](./public/assets/images/notes-page.jpg)
 
 ## Usage
 To use the Note Taker application, follow these steps:
@@ -12,6 +15,8 @@ To use the Note Taker application, follow these steps:
 6. Click on the Save icon to save the new note. The new note will appear in the left-hand column with the other existing notes.
 7. To view an existing note, click on the note in the list in the left-hand column. The note will appear in the right-hand column.
 
+## Website
+[Heroku website deployment](https://lerobles-note-taker.herokuapp.com/)
 
 ## Technology
 This application was built using the following technologies:
@@ -22,4 +27,4 @@ JavaScript
 Node.js
 Express.js
 Bootstrap
-UUID
+crypto
