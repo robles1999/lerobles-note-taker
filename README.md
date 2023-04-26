@@ -21,10 +21,10 @@ To use the Note Taker application, follow these steps:
 ## Technology
 This application was built using the following technologies:
 
-HTML
-CSS
-JavaScript
-Node.js
-Express.js
-Bootstrap
-crypto
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express.js
+- Bootstrap
+- crypto
