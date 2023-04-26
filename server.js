@@ -3,7 +3,7 @@ const app = new express();
 const notesRouter = require("./routes/notes");
 const apiRouter = require("./routes/api");
 
-const PORT = 3000;
+const PORT = process.env.port||3000;
 
 app.use(express.static("public"));
 app.use(express.json());
