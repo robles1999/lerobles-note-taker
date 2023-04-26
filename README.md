@@ -1,5 +1,5 @@
 ## Note-Taking Application
-This is a note-taking application that allows users to create, save, and view notes.
+This is a note-taking application that allows users to create, save, delete, and view notes.
 
 ![landing page screenshot](./public/assets/images/note-taker-landing-page.jpg)
 ![notes page screenshot](./public/assets/images/notes-page.jpg)
