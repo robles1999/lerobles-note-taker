@@ -1,7 +1,5 @@
 const express = require("express");
-const fs = require("fs");
 let router = express.Router();
-const path = require("path");
 const crypto = require("crypto");
 const notes = require("../db/db.json");
 const writeToDb = require("../helpers/writeFiles");
