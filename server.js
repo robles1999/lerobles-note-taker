@@ -4,6 +4,7 @@ const notesRouter = require("./routes/notes");
 const apiRouter = require("./routes/api");
 const path = require("path");
 
+
 const PORT = process.env.PORT || 3000;
 
 //::::: Middleware and Routes ::::::

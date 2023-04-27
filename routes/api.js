@@ -4,6 +4,7 @@ let router = express.Router();
 const path = require("path");
 const crypto = require("crypto");
 const notes = require("../db/db.json");
+const writeToDb = require("../helpers/writeFiles");
 
 // Since server.js has `app.use("/api", apiRouter)`
 // this route is the same as `router.get("/api/notes", (req, res) etc...`
@@ -26,15 +27,8 @@ router.post("/notes", (req, res) => {
 
   notes.push(newNote);
 
-  // Write the updated object back to the file
-  fs.writeFile(
-    path.join(__dirname, "../db/db.json"),
-    JSON.stringify(notes),
-    (err) => {
-      if (err) throw err;
-      res.send("Note added.");
-    }
-  );
+  // Helper fn to write to db.json
+  writeToDb(notes, req, res);
 });
 
 // Delete note based on the note id passed in
@@ -50,15 +44,8 @@ router.delete("/notes/:id", (req, res) =>
     notes.splice(itemIndex, 1);
   }
 
-  // Write the updated object back to the file
-  fs.writeFile(
-    path.join(__dirname, "../db/db.json"),
-    JSON.stringify(notes),
-    (err) => {
-      if (err) throw err;
-      res.send("Note deleted.");
-    }
-  );
+  // Helper fn to write to db.json
+  writeToDb(notes, req, res);
 });
 
 module.exports = router;
